@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أوجا ماركت - سوقك الإلكتروني</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="language-switcher">
+        <a href="index.en.html"><button class="lang-btn" id="langToggle">
+            <i class="fas fa-globe"></i>
+            <span id="langText">English</span>
+        </button></a>
+    </div>
+        <div class="header-content">
+            <div class="logo-section">
+                <h1><i class="fas fa-shopping-bag"></i> أوجا ماركت</h1>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="ابحث عن منتج أو فئة...">
+                
+                <div class="search-stats">اكتب أي حرف للبحث التلقائي</div>
+            </div>
+            
+            <p class="header-subtitle">سوقك الإلكتروني لبيع وشراء المنتجات بكل سهولة وأمان</p>
+        </div>
+    </header>
+    
+    <div class="categories-container">
+        <button class="category-btn active-category" data-category="الكل"><i class="fas fa-list"></i> جميع المنتجات</button>
+        <button class="category-btn" data-category="عقارات"><i class="fas fa-home"></i> عقارات</button>
+        <button class="category-btn" data-category="مركبات"><i class="fas fa-car"></i> مركبات</button>
+        <button class="category-btn" data-category="ملابس"><i class="fas fa-tshirt"></i> ملابس</button>
+        <button class="category-btn" data-category="طعام"><i class="fas fa-utensils"></i> طعام</button>
+        <button class="category-btn" data-category="هواتف"><i class="fas fa-mobile-alt"></i> هواتف</button>
+        <button class="category-btn" data-category="أجهزة كهربائية"><i class="fas fa-plug"></i> أجهزة كهربائية</button>
+        <button class="category-btn" data-category="إلكترونيات"><i class="fas fa-laptop"></i> إلكترونيات</button>
+        <button class="category-btn" data-category="أثاث"><i class="fas fa-couch"></i> أثاث</button>
+    </div>
+    
+    <div class="search-results-info" id="resultsInfo">
+        يتم عرض <span id="resultsCount">0</span> منتج من أصل <span id="totalProducts">0</span>
+    </div>
+    
+    <div class="whatsapp-section">
+        <h2>لإضافة منتجك أرسله عن طريق الواتساب</h2>
+        <a class="wat11" href=""><button class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> تواصل معنا الآن
+        </button></a>
+    </div>
+    
+    <div class="products-grid" id="productsContainer">
+        <!-- المنتج 1 -->
+        <div class="product-card" data-name="هاتف سامسونج S22" data-category="هواتف" data-description="هاتف ذكي بشاشة 6.1 بوصة، كاميرا 50 ميجابكسل، ذاكرة 8 جيجابايت، تخزين 128 جيجابايت، مقاوم للماء والغبار.">
+            <div class="product-image">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="product-info">
+                <span class="product-category">هواتف</span>
+                <span class="location"><i class="fas fa-map-marker-alt"></i>ابوجا</span>
+                <h3 class="product-name">هاتف سامسونج S22</h3>
+                <div class="product-price">2,450 ر.س</div>
+                <p class="product-description">هاتف ذكي بشاشة 6.1 بوصة، كاميرا 50 ميجابكسل، ذاكرة 8 جيجابايت، تخزين 128 جيجابايت، مقاوم للماء والغبار.</p>
+                <a href=""><button class="buy-btn">شراء المنتج</button></a>
+            </div>
+        </div>
+        
+        <!-- المنتج 2 -->
+        <div class="product-card" data-name="لابتوب ديل XPS 13" data-category="إلكترونيات" data-description="لابتوب فائق الأداء بشاشة 13.3 بوصة، معالج i7، ذاكرة 16 جيجابايت، تخزين 512 جيجابايت SSD.">
+            <div class="product-image">
+                <i class="fas fa-laptop"></i>
+            </div>
+            <div class="product-info">
+                <span class="product-category">إلكترونيات</span>
+                <h3 class="product-name">لابتوب ديل XPS 13</h3>
+                <div class="product-price">4,200 ر.س</div>
+                <p class="product-description">لابتوب فائق الأداء بشاشة 13.3 بوصة، معالج i7، ذاكرة 16 جيجابايت، تخزين 512 جيجابايت SSD.</p>
+                <button class="buy-btn">شراء المنتج</button>
+            </div>
+        </div>
+        
+        <!-- المنتج 3 -->
+        <div class="product-card" data-name="تلفزيون سمارت 55 بوصة" data-category="أجهزة كهربائية" data-description="تلفزيون ذكي بدقة 4K، شاشة 55 بوصة، نظام أندرويد، دعم واي فاي، منفذين USB، منفذين HDMI.">
+            <div class="product-image">
+                <i class="fas fa-tv"></i>
+            </div>
+            <div class="product-info">
+                <span class="product-category">أجهزة كهربائية</span>
+
+                <h3 class="product-name">تلفزيون سمارت 55 بوصة</h3>
+                <div class="product-price">3,100 ر.س</div>
+                <p class="product-description">تلفزيون ذكي بدقة 4K، شاشة 55 بوصة، نظام أندرويد، دعم واي فاي، منفذين USB، منفذين HDMI.</p>
+                <button class="buy-btn">شراء المنتج</button>
+            </div>
+        </div>
+        
+        <!-- المنتج 4 -->
+        <div class="product-card" data-name="بدلة رجالية رسمية" data-category="ملابس" data-description="بدلة رجالية أنيقة من الصوف عالي الجودة، متوفرة بألوان متعددة ومقاسات مختلفة.">
+            <div class="product-image">
+                <i class="fas fa-tshirt"></i>
+            </div>
+            <div class="product-info">
+                <span class="product-category">ملابس</span>
+                <h3 class="product-name">بدلة رجالية رسمية</h3>
+                <div class="product-price">850 ر.س</div>
+                <p class="product-description">بدلة رجالية أنيقة من الصوف عالي الجودة، متوفرة بألوان متعددة ومقاسات مختلفة.</p>
+                <button class="buy-btn">شراء المنتج</button>
+            </div>
+        </div>
+        
+        <!-- المنتج 5 -->
+        <div class="product-card" data-name="ساعة ذكية هواوي" data-category="إلكترونيات" data-description="ساعة ذكية بشاشة AMOLED 1.5 بوصة، مقاومة للماء، تتبع اللياقة، بطارية تدوم 14 يومًا.">
+            <div class="product-image">
+                <i class="fas fa-watch"></i>
+            </div>
+            <div class="product-info">
+                <span class="product-category">إلكترونيات</span>
+                <h3 class="product-name">ساعة ذكية هواوي</h3>
+                <div class="product-price">650 ر.س</div>
+                <p class="product-description">ساعة ذكية بشاشة AMOLED 1.5 بوصة، مقاومة للماء، تتبع اللياقة، بطارية تدوم 14 يومًا.</p>
+                <button class="buy-btn">شراء المنتج</button>
+            </div>
+        </div>
+        
+        <!-- المنتج 6 -->
+        <div class="product-card" data-name="كنبة جلد 3 مقاعد" data-category="أثاث" data-description="كنبة فاخرة من الجلد الصناعي عالي الجودة، مقاس 3 مقاعد، متوفرة بعدة ألوان.">
+            <div class="product-image">
+                <i class="fas fa-couch"></i>
+            </div>
+            <div class="product-info">
+                <span class="product-category">أثاث</span>
+                <h3 class="product-name">كنبة جلد 3 مقاعد</h3>
+                <div class="product-price">1,950 ر.س</div>
+                <p class="product-description">كنبة فاخرة من الجلد الصناعي عالي الجودة، مقاس 3 مقاعد، متوفرة بعدة ألوان.</p>
+                <button class="buy-btn">شراء المنتج</button>
+            </div>
+        </div>
+        
+        <!-- المنتج 7 -->
+        <div class="product-card" data-name="شقة للبيع بالرياض" data-category="عقارات" data-description="شقة فاخرة للبيع في حي السفارات، مساحة 180 متر، 3 غرف نوم، صالة كبيرة، مطبخ مجهز.">
+            <div class="product-image">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="product-info">
+                <span class="product-category">عقارات</span>
+                <h3 class="product-name">شقة للبيع بالرياض</h3>
+                <div class="product-price">850,000 ر.س</div>
+                <p class="product-description">شقة فاخرة للبيع في حي السفارات، مساحة 180 متر، 3 غرف نوم، صالة كبيرة، مطبخ مجهز.</p>
+                <button class="buy-btn">شراء المنتج</button>
+            </div>
+        </div>
+        
+        <!-- المنتج 8 -->
+        <div class="product-card" data-name="سيارة تويوتا كامري 2023" data-category="مركبات" data-description="سيارة تويوتا كامري موديل 2023، فل كامل، لون أسود، قير أوتوماتيك، 6 سلندر.">
+            <div class="product-image">
+                <i class="fas fa-car"></i>
+            </div>
+            <div class="product-info">
+                <span class="product-category">مركبات</span>
+                <h3 class="product-name">سيارة تويوتا كامري 2023</h3>
+                <div class="product-price">145,000 ر.س</div>
+                <p class="product-description">سيارة تويوتا كامري موديل 2023، فل كامل، لون أسود، قير أوتوماتيك، 6 سلندر.</p>
+                <button class="buy-btn">شراء المنتج</button>
+            </div>
+        </div>
+        
+        <!-- رسالة عدم وجود نتائج -->
+        <div class="no-results">
+            <i class="fas fa-search"></i>
+            <p>لم يتم العثور على منتجات تطابق بحثك</p>
+            <p>حاول استخدام كلمات أخرى أو تصفح فئات المتجر</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2023 أوجا ماركت - جميع الحقوق محفوظة</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <div class="category-notification" id="categoryNotification">
+        يتم عرض منتجات <span id="currentCategoryText">الكل</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
