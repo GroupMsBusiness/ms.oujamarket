@@ -118,8 +118,8 @@
         
         .category-btn {
             flex: 1;
-            min-width: 160px;
-            max-width: 220px;
+            min-width: 200px;
+            max-width: 280px;
             height: 50px;
             padding: 0 15px;
             border: none;
@@ -499,3 +499,4 @@
             margin-bottom: 3px;
 
         }
+
