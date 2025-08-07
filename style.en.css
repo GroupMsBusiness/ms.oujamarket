@@ -71,7 +71,7 @@
             left: 15px;
             top: 50%;
             transform: translateY(-50%);
-            background: #1a6dcc;
+            background: red;
             color: white;
             border: none;
             width: 40px;
@@ -499,4 +499,5 @@
             margin-bottom: 3px;
 
         }
+
 
