@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-            // إضافة تأثير عند تمرير الماوس على أزرار التصنيفات
+            // Add hover effect to category buttons
             const categoryBtns = document.querySelectorAll('.category-btn');
             categoryBtns.forEach(btn => {
                 btn.addEventListener('mouseenter', function() {
@@ -13,19 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
             
-            // إضافة تأثير عند الضغط على أزرار الشراء
+            // Add click effect to buy buttons
             const buyBtns = document.querySelectorAll('.buy-btn');
             buyBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
                     const productName = this.closest('.product-card').querySelector('.product-name').textContent;
                     
-                    // تغيير النص مؤقتًا للإشارة إلى العملية
+                    // Temporarily change the text to indicate processing
                     const originalText = this.textContent;
-                    this.textContent = 'جاري التحميل...';
+                    this.textContent = 'Loading...';
                     this.disabled = true;
                     
                     setTimeout(() => {
-                        this.textContent = 'تمت العملية!';
+                        this.textContent = 'Completed!';
                         this.style.background = 'linear-gradient(to right, #27ae60, #2ecc71)';
                         
                         setTimeout(() => {
@@ -33,14 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
                             this.disabled = false;
                             this.style.background = 'linear-gradient(to right, #e74c3c, #c0392b)';
                             
-                            // رسالة تأكيد
-                            alert(`تمت إضافة ${productName} إلى سلة التسوق!`);
+                            // Confirmation message
+                            alert(`Added ${productName} to the shopping cart!`);
                         }, 1500);
                     }, 1000);
                 });
             });
             
-            // وظيفة البحث التلقائي
+            // Auto search function
             const searchInput = document.querySelector('#searchInput');
             
             const productCards = document.querySelectorAll('.product-card');
@@ -53,34 +53,34 @@ document.addEventListener('DOMContentLoaded', function() {
             const categoryNotification = document.getElementById('categoryNotification');
             const currentCategoryText = document.getElementById('currentCategoryText');
             
-            let currentCategory = "الكل";
+            let currentCategory = "All";
             totalProducts.textContent = productCards.length;
             
-            // تفعيل البحث عند الكتابة
+            // Enable search on typing
             searchInput.addEventListener('input', function() {
                 performSearch(this.value.trim());
             });
             
-            // تفعيل البحث عند الضغط على زر البحث
+            // Enable search on search button click
             
             
-            // تفعيل البحث عند الضغط على Enter
+            // Enable search when pressing Enter
             searchInput.addEventListener('keypress', function(e) {
                 if(e.key === 'Enter') {
                     performSearch(this.value.trim());
                 }
             });
             
-            // وظيفة البحث الرئيسية
+            // Main search function
             function performSearch(searchTerm) {
                 const lowerTerm = searchTerm.toLowerCase();
                 let foundResults = 0;
                 let totalVisible = 0;
                 
-                // إظهار جميع المنتجات إذا كان البحث فارغاً
+                // Show all products if search is empty
                 if(searchTerm === '') {
                     productCards.forEach(card => {
-                        if(currentCategory === "الكل" || card.dataset.category === currentCategory) {
+                        if(currentCategory.toLowerCase() === 'all' || card.dataset.category.toLowerCase() === currentCategory.toLowerCase()) {
                             card.style.display = 'flex';
                             foundResults++;
                             totalVisible++;
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     });
                 } else {
-                    // البحث في المنتجات
+                    // Search within products
                     productCards.forEach(card => {
                         const name = card.dataset.name.toLowerCase();
                         const category = card.dataset.category.toLowerCase();
@@ -100,14 +100,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         const descriptionMatch = description.includes(lowerTerm);
                         
                         const matchesSearch = nameMatch || categoryMatch || descriptionMatch;
-                        const matchesCategory = currentCategory === "الكل" || card.dataset.category === currentCategory;
+                        const matchesCategory = currentCategory.toLowerCase() === 'all' || card.dataset.category.toLowerCase() === currentCategory.toLowerCase();
                         
                         if(matchesSearch && matchesCategory) {
                             card.style.display = 'flex';
                             foundResults++;
                             totalVisible++;
                             
-                            // تمييز الكلمات المطابقة في الاسم والوصف
+                            // Highlight matching words in name and description
                             if(nameMatch) {
                                 highlightText(card.querySelector('.product-name'), searchTerm);
                             }
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
                 
-                // إظهار رسالة عدم وجود نتائج إذا لزم الأمر
+                // Show 'no results' message if needed
                 if(foundResults === 0) {
                     noResults.style.display = 'block';
                     resultsInfo.style.display = 'none';
@@ -131,11 +131,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     resultsCount.textContent = foundResults;
                 }
                 
-                // إظهار عدد النتائج
-                resultsInfo.style.display = searchTerm !== '' || currentCategory !== 'الكل' ? 'block' : 'none';
+                // Display number of results
+                resultsInfo.style.display = searchTerm !== '' || currentCategory !== 'All' ? 'block' : 'none';
             }
             
-            // وظيفة تمييز النص
+            // Text highlight function
             function highlightText(element, term) {
                 const regex = new RegExp(term, 'gi');
                 const originalText = element.getAttribute('data-original') || element.innerHTML;
@@ -149,33 +149,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 element.innerHTML = highlightedText;
             }
             
-            // تفعيل التصنيفات
+            // Enable category selection
             categoryButtons.forEach(btn => {
                 btn.addEventListener('click', function() {
-                    // إزالة النشاط من جميع الأزرار
+                    // Remove active state from all buttons
                     categoryButtons.forEach(b => b.classList.remove('active-category'));
                     
-                    // إضافة النشاط للزر الحالي
+                    // Add active state to current button
                     this.classList.add('active-category');
                     
-                    // تحديث التصنيف الحالي
+                    // Update current category
                     currentCategory = this.dataset.category;
                     currentCategoryText.textContent = currentCategory;
                     
-                    // إظهار الإشعار
+                    // Show notification
                     categoryNotification.style.opacity = '1';
                     setTimeout(() => {
                         categoryNotification.style.opacity = '0';
                     }, 2000);
                     
-                    // إعادة تعيين البحث
+                    // Reset search
                     searchInput.value = '';
                     
-                    // تنفيذ البحث مع التصنيف الجديد
+                    // Perform search with new category
+                    if(currentCategory.toLowerCase() === 'all') {
+                        productCards.forEach(card => card.style.display = 'flex');
+                    }
                     performSearch('');
                 });
             });
             
-            // البحث الأولي لإظهار جميع المنتجات
+            // Initial search to display all products
             performSearch('');
         });
