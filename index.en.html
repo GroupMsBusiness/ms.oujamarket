@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ouja market</title>
+    <title>Ouja Market – Your Online Marketplace</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.en.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -17,166 +17,167 @@
     </div>
         <div class="header-content">
             <div class="logo-section">
-                <h1><i class="fas fa-shopping-bag"></i>ouja market</h1>
+                <h1><i class="fas fa-shopping-bag"></i> ouja market</h1>
             </div>
             
             <div class="search-container">
-                <input type="text" class="search-input" id="searchInput" placeholder="  search for product">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search for a product or category…">
                 
-                <div class="search-stats"></div>
+                <div class="search-stats">Type any letter for auto search</div>
             </div>
             
-            <p class="header-subtitle">your online market to sell and buy products easily</p>
+            <p class="header-subtitle">Your online market for buying and selling products easily and safely</p>
         </div>
     </header>
     
     <div class="categories-container">
-        <button class="category-btn active-category" data-category="all"><i class="fas fa-list"></i> all products</button>
-        <button class="category-btn" data-category="real estate"><i class="fas fa-home"></i> real estate</button>
-        <button class="category-btn" data-category="vehicles"><i class="fas fa-car"></i> vehicles</button>
-        <button class="category-btn" data-category="clothes"><i class="fas fa-tshirt"></i> clothes</button>
-        <button class="category-btn" data-category="food"><i class="fas fa-utensils"></i> food</button>
-        <button class="category-btn" data-category="phone"><i class="fas fa-mobile-alt"></i> phone</button>
-        <button class="category-btn" data-category="electrical"><i class="fas fa-plug"></i>electrical</button>
-        <button class="category-btn" data-category="electronics"><i class="fas fa-laptop"></i> electronics</button>
-        <button class="category-btn" data-category="furniture"><i class="fas fa-couch"></i> furniture</button>
+        <button class="category-btn active-category" data-category="All"><i class="fas fa-list"></i> All Products</button>
+        <button class="category-btn" data-category="Real Estate"><i class="fas fa-home"></i> Real Estate</button>
+        <button class="category-btn" data-category="Vehicles"><i class="fas fa-car"></i> Vehicles</button>
+        <button class="category-btn" data-category="Clothing"><i class="fas fa-tshirt"></i> Clothing</button>
+        <button class="category-btn" data-category="Food"><i class="fas fa-utensils"></i> Food</button>
+        <button class="category-btn" data-category="Phones"><i class="fas fa-mobile-alt"></i> Phones</button>
+        <button class="category-btn" data-category="Electrical Appliances"><i class="fas fa-plug"></i> Electrical Appliances</button>
+        <button class="category-btn" data-category="Electronics"><i class="fas fa-laptop"></i> Electronics</button>
+        <button class="category-btn" data-category="Furniture"><i class="fas fa-couch"></i> Furniture</button>
     </div>
     
     <div class="search-results-info" id="resultsInfo">
-         is displayed <span id="resultsCount">0</span> product out of <span id="totalProducts">0</span>
+        Showing <span id="resultsCount">0</span> products out of <span id="totalProducts">0</span>
     </div>
     
     <div class="whatsapp-section">
-        <h2>to add your product send it via whatsapp</h2>
-        <a class="wat11" href="https://wa.me/+966568824106"><button class="whatsapp-btn">
-            <i class="fab fa-whatsapp"></i> contact us now
+        <h2>To add your product, send it via WhatsApp</h2>
+        <a class="wat11" href=""><button class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Contact us now
         </button></a>
     </div>
     
     <div class="products-grid" id="productsContainer">
         <!-- المنتج 1 -->
-        <div class="product-card" data-name="هاتف سامسونج S22" data-category="هواتف" data-description="هاتف ذكي بشاشة 6.1 بوصة، كاميرا 50 ميجابكسل، ذاكرة 8 جيجابايت، تخزين 128 جيجابايت، مقاوم للماء والغبار.">
+        <div class="product-card" data-name="Samsung S22 Phone" data-category="Phones" data-description="Smartphone with 6.1-inch display, 50MP camera, 8GB RAM, 128GB storage, water and dust resistant.">
             <div class="product-image">
                 <i class="fas fa-mobile-alt"></i>
             </div>
             <div class="product-info">
-                <span class="product-category">هواتف</span>
-                <span class="location"><i class="fas fa-map-marker-alt"></i>nigeria kano</span>
-                <h3 class="product-name">هاتف سامسونج S22</h3>
+                <span class="product-category">Phones</span>
+                <span class="location"><i class="fas fa-map-marker-alt"></i>Abuja</span>
+                <h3 class="product-name">Samsung S22 Phone</h3>
                 <div class="product-price">2,450 ر.س</div>
-                <p class="product-description">هاتف ذكي بشاشة 6.1 بوصة، كاميرا 50 ميجابكسل، ذاكرة 8 جيجابايت، تخزين 128 جيجابايت، مقاوم للماء والغبار.</p>
-                <a href=""><button class="buy-btn">شراء المنتج</button></a>
+                <p class="product-description">Smartphone with 6.1-inch display, 50MP camera, 8GB RAM, 128GB storage, water and dust resistant.</p>
+                <a href=""><button class="buy-btn">Buy Product</button></a>
             </div>
         </div>
         
         <!-- المنتج 2 -->
-        <div class="product-card" data-name="لابتوب ديل XPS 13" data-category="إلكترونيات" data-description="لابتوب فائق الأداء بشاشة 13.3 بوصة، معالج i7، ذاكرة 16 جيجابايت، تخزين 512 جيجابايت SSD.">
+        <div class="product-card" data-name="Dell XPS 13 Laptop" data-category="Electronics" data-description="High-performance laptop with 13.3-inch display, i7 processor, 16GB RAM, 512GB SSD storage.">
             <div class="product-image">
                 <i class="fas fa-laptop"></i>
             </div>
             <div class="product-info">
-                <span class="product-category">إلكترونيات</span>
-                <h3 class="product-name">لابتوب ديل XPS 13</h3>
+                <span class="product-category">Electronics</span>
+                <h3 class="product-name">Dell XPS 13 Laptop</h3>
                 <div class="product-price">4,200 ر.س</div>
-                <p class="product-description">لابتوب فائق الأداء بشاشة 13.3 بوصة، معالج i7، ذاكرة 16 جيجابايت، تخزين 512 جيجابايت SSD.</p>
-                <button class="buy-btn">شراء المنتج</button>
+                <p class="product-description">High-performance laptop with 13.3-inch display, i7 processor, 16GB RAM, 512GB SSD storage.</p>
+                <button class="buy-btn">Buy Product</button>
             </div>
         </div>
         
         <!-- المنتج 3 -->
-        <div class="product-card" data-name="تلفزيون سمارت 55 بوصة" data-category="اجهزة كهربائية" data-description="تلفزيون ذكي بدقة 4K، شاشة 55 بوصة، نظام أندرويد، دعم واي فاي، منفذين USB، منفذين HDMI.">
+        <div class="product-card" data-name="55-inch Smart TV" data-category="Electrical Appliances" data-description="Smart TV with 4K resolution, 55-inch screen, Android system, Wi-Fi support, 2 USB ports, 2 HDMI ports.">
             <div class="product-image">
                 <i class="fas fa-tv"></i>
             </div>
             <div class="product-info">
-                <span class="product-category">أجهزة كهربائية</span>
-                <h3 class="product-name">تلفزيون سمارت 55 بوصة</h3>
+                <span class="product-category">Electrical Appliances</span>
+
+                <h3 class="product-name">55-inch Smart TV</h3>
                 <div class="product-price">3,100 ر.س</div>
-                <p class="product-description">تلفزيون ذكي بدقة 4K، شاشة 55 بوصة، نظام أندرويد، دعم واي فاي، منفذين USB، منفذين HDMI.</p>
-                <button class="buy-btn">شراء المنتج</button>
+                <p class="product-description">Smart TV with 4K resolution, 55-inch screen, Android system, Wi-Fi support, 2 USB ports, 2 HDMI ports.</p>
+                <button class="buy-btn">Buy Product</button>
             </div>
         </div>
         
         <!-- المنتج 4 -->
-        <div class="product-card" data-name="بدلة رجالية رسمية" data-category="ملابس" data-description="بدلة رجالية أنيقة من الصوف عالي الجودة، متوفرة بألوان متعددة ومقاسات مختلفة.">
+        <div class="product-card" data-name="Men's Formal Suit" data-category="Clothing" data-description="Elegant men's suit made of high-quality wool, available in multiple colors and sizes.">
             <div class="product-image">
                 <i class="fas fa-tshirt"></i>
             </div>
             <div class="product-info">
-                <span class="product-category">ملابس</span>
-                <h3 class="product-name">بدلة رجالية رسمية</h3>
+                <span class="product-category">Clothing</span>
+                <h3 class="product-name">Men's Formal Suit</h3>
                 <div class="product-price">850 ر.س</div>
-                <p class="product-description">بدلة رجالية أنيقة من الصوف عالي الجودة، متوفرة بألوان متعددة ومقاسات مختلفة.</p>
-                <button class="buy-btn">شراء المنتج</button>
+                <p class="product-description">Elegant men's suit made of high-quality wool, available in multiple colors and sizes.</p>
+                <button class="buy-btn">Buy Product</button>
             </div>
         </div>
         
         <!-- المنتج 5 -->
-        <div class="product-card" data-name="ساعة ذكية هواوي" data-category="إلكترونيات" data-description="ساعة ذكية بشاشة AMOLED 1.5 بوصة، مقاومة للماء، تتبع اللياقة، بطارية تدوم 14 يومًا.">
+        <div class="product-card" data-name="Huawei Smartwatch" data-category="Electronics" data-description="Smartwatch with 1.5-inch AMOLED display, water-resistant, fitness tracking, 14-day battery life.">
             <div class="product-image">
                 <i class="fas fa-watch"></i>
             </div>
             <div class="product-info">
-                <span class="product-category">إلكترونيات</span>
-                <h3 class="product-name">ساعة ذكية هواوي</h3>
+                <span class="product-category">Electronics</span>
+                <h3 class="product-name">Huawei Smartwatch</h3>
                 <div class="product-price">650 ر.س</div>
-                <p class="product-description">ساعة ذكية بشاشة AMOLED 1.5 بوصة، مقاومة للماء، تتبع اللياقة، بطارية تدوم 14 يومًا.</p>
-                <button class="buy-btn">شراء المنتج</button>
+                <p class="product-description">Smartwatch with 1.5-inch AMOLED display, water-resistant, fitness tracking, 14-day battery life.</p>
+                <button class="buy-btn">Buy Product</button>
             </div>
         </div>
         
         <!-- المنتج 6 -->
-        <div class="product-card" data-name="كنبة جلد 3 مقاعد" data-category="أثاث" data-description="كنبة فاخرة من الجلد الصناعي عالي الجودة، مقاس 3 مقاعد، متوفرة بعدة ألوان.">
+        <div class="product-card" data-name="3-Seater Leather Sofa" data-category="Furniture" data-description="Luxury sofa made of high-quality synthetic leather, 3 seats, available in several colors.">
             <div class="product-image">
                 <i class="fas fa-couch"></i>
             </div>
             <div class="product-info">
-                <span class="product-category">أثاث</span>
-                <h3 class="product-name">كنبة جلد 3 مقاعد</h3>
+                <span class="product-category">Furniture</span>
+                <h3 class="product-name">3-Seater Leather Sofa</h3>
                 <div class="product-price">1,950 ر.س</div>
-                <p class="product-description">كنبة فاخرة من الجلد الصناعي عالي الجودة، مقاس 3 مقاعد، متوفرة بعدة ألوان.</p>
-                <button class="buy-btn">شراء المنتج</button>
+                <p class="product-description">Luxury sofa made of high-quality synthetic leather, 3 seats, available in several colors.</p>
+                <button class="buy-btn">Buy Product</button>
             </div>
         </div>
         
         <!-- المنتج 7 -->
-        <div class="product-card" data-name="شقة للبيع بالرياض" data-category="عقارات" data-description="شقة فاخرة للبيع في حي السفارات، مساحة 180 متر، 3 غرف نوم، صالة كبيرة، مطبخ مجهز.">
+        <div class="product-card" data-name="Apartment for Sale in Riyadh" data-category="Real Estate" data-description="Luxury apartment for sale in Diplomatic Quarter, 180 sqm, 3 bedrooms, large living room, equipped kitchen.">
             <div class="product-image">
                 <i class="fas fa-home"></i>
             </div>
             <div class="product-info">
-                <span class="product-category">عقارات</span>
-                <h3 class="product-name">شقة للبيع بالرياض</h3>
+                <span class="product-category">Real Estate</span>
+                <h3 class="product-name">Apartment for Sale in Riyadh</h3>
                 <div class="product-price">850,000 ر.س</div>
-                <p class="product-description">شقة فاخرة للبيع في حي السفارات، مساحة 180 متر، 3 غرف نوم، صالة كبيرة، مطبخ مجهز.</p>
-                <button class="buy-btn">شراء المنتج</button>
+                <p class="product-description">Luxury apartment for sale in Diplomatic Quarter, 180 sqm, 3 bedrooms, large living room, equipped kitchen.</p>
+                <button class="buy-btn">Buy Product</button>
             </div>
         </div>
         
         <!-- المنتج 8 -->
-        <div class="product-card" data-name="سيارة تويوتا كامري 2023" data-category="مركبات" data-description="سيارة تويوتا كامري موديل 2023، فل كامل، لون أسود، قير أوتوماتيك، 6 سلندر.">
+        <div class="product-card" data-name="Toyota Camry 2023" data-category="Vehicles" data-description="Toyota Camry 2023, full option, black color, automatic transmission, V6 engine.">
             <div class="product-image">
                 <i class="fas fa-car"></i>
             </div>
             <div class="product-info">
-                <span class="product-category">مركبات</span>
-                <h3 class="product-name">سيارة تويوتا كامري 2023</h3>
+                <span class="product-category">Vehicles</span>
+                <h3 class="product-name">Toyota Camry 2023</h3>
                 <div class="product-price">145,000 ر.س</div>
-                <p class="product-description">سيارة تويوتا كامري موديل 2023، فل كامل، لون أسود، قير أوتوماتيك، 6 سلندر.</p>
-                <button class="buy-btn">شراء المنتج</button>
+                <p class="product-description">Toyota Camry 2023, full option, black color, automatic transmission, V6 engine.</p>
+                <button class="buy-btn">Buy Product</button>
             </div>
         </div>
         
         <!-- رسالة عدم وجود نتائج -->
         <div class="no-results">
             <i class="fas fa-search"></i>
-            <p>لم يتم العثور على منتجات تطابق بحثك</p>
-            <p>حاول استخدام كلمات أخرى أو تصفح فئات المتجر</p>
+            <p>No products found matching your search</p>
+            <p>Try using other words or browse store categories</p>
         </div>
     </div>
     
     <div class="footer">
-        <p>© 2023 أوجا ماركت - جميع الحقوق محفوظة</p>
+        <p>© 2023 Ouja Market – All Rights Reserved</p>
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -186,9 +187,8 @@
     </div>
 
     <div class="category-notification" id="categoryNotification">
-        يتم عرض منتجات <span id="currentCategoryText">الكل</span>
+        Showing products <span id="currentCategoryText">All</span>
     </div>
-    
     <script src="script.en.js"></script>
 </body>
 </html>
